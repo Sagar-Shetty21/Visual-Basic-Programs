@@ -2,6 +2,7 @@
 
 
 ### **1. Write a VB program to design a simple calculator to perform addition,subtraction,multiplication and division(Use functions for the calculations).**
+![Screenshot (2)](https://user-images.githubusercontent.com/74803670/177051678-607fe38e-59b2-4d31-ac91-5f5c04559780.png)
 ```
 Option Explicit
 Dim operand As Double, operand2 As Double
@@ -87,10 +88,10 @@ Private Function divi(ByVal operand1 As Double, ByVal operand2 As Double) As Dou
     divi = operand1 / operand2
 End Function
 ```
-![Screenshot (2)](https://user-images.githubusercontent.com/74803670/177051678-607fe38e-59b2-4d31-ac91-5f5c04559780.png)
 ---
 ---
 ### **2. Design a User Interface (UI) to accept the student details such as name,department and total marks.Validate the input data and calculate the percentage nd division**
+![Screenshot (3)](https://user-images.githubusercontent.com/74803670/177051946-ba4cd5a8-d301-4364-9abb-d421b691e55d.png)
 ```
 Private Sub cal_Click()
     Dim a As Integer
@@ -187,7 +188,6 @@ Private Sub Text5_keypress(keyAscii As Integer)
     End If
 End Sub
 ```
-![Screenshot (3)](https://user-images.githubusercontent.com/74803670/177051946-ba4cd5a8-d301-4364-9abb-d421b691e55d.png)
 ---
 ---
 
