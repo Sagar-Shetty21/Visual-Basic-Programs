@@ -2,7 +2,7 @@
 
 
 ### **1. Write a VB program to design a simple calculator to perform addition,subtraction,multiplication and division(Use functions for the calculations).**
-`
+```Simple_Calculator.frm
 Option Explicit
 Dim operand As Double, operand2 As Double
 Dim op1 As Double, op2 As Double
@@ -86,6 +86,6 @@ End Function
 Private Function divi(ByVal operand1 As Double, ByVal operand2 As Double) As Double
     divi = operand1 / operand2
 End Function
-`
+```
 
 ---
