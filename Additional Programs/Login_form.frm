@@ -1,19 +1,18 @@
 VERSION 5.00
 Begin VB.Form Form1 
-   Caption         =   "Odd or Even"
-   ClientHeight    =   3090
+   Caption         =   "Log-in form"
+   ClientHeight    =   3015
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   5490
+   ClientWidth     =   4560
    LinkTopic       =   "Form1"
-   ScaleHeight     =   3090
-   ScaleWidth      =   5490
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
-   Begin VB.CommandButton Command2 
-      Caption         =   "Clear"
+   Begin VB.TextBox Text2 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   17.25
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -21,60 +20,77 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3000
+      Left            =   1920
+      TabIndex        =   4
+      Top             =   1320
+      Width           =   2175
+   End
+   Begin VB.TextBox Text1 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   1920
       TabIndex        =   3
-      Top             =   1920
-      Width           =   1215
+      Top             =   600
+      Width           =   2175
    End
    Begin VB.CommandButton Command1 
       Caption         =   "OK"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   17.25
+         Size            =   12
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   960
+      Left            =   1560
       TabIndex        =   2
-      Top             =   1920
+      Top             =   2280
       Width           =   1215
    End
-   Begin VB.TextBox Text1 
+   Begin VB.Label Label2 
+      Caption         =   "Password"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   15
+         Size            =   9.75
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3240
+      Left            =   480
       TabIndex        =   1
-      Top             =   480
-      Width           =   1455
+      Top             =   1440
+      Width           =   1215
    End
    Begin VB.Label Label1 
-      Caption         =   "Enter a Number : "
+      Caption         =   "UserName"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   15
+         Size            =   9.75
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   360
+      Left            =   480
       TabIndex        =   0
-      Top             =   480
-      Width           =   2535
+      Top             =   600
+      Width           =   1215
    End
 End
 Attribute VB_Name = "Form1"
@@ -83,9 +99,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-
-End Sub
-
-Private Sub Command2_Click()
-
+    Dim username, password As String
+    username = "sagar"
+    password = "12345"
+    
+    If Text1.Text = username And Text2.Text = password Then
+    MsgBox ("Sign in Successful")
+    ElseIf Text1.Text <> username Or Text2.Text <> password Then
+    MsgBox ("Sign in failed")
+    End If
 End Sub
