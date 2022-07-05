@@ -3,10 +3,10 @@
 
 ### **1. Write a VB program to design a simple calculator to perform addition,subtraction,multiplication and division(Use functions for the calculations).**
 ![Screenshot (2)](https://user-images.githubusercontent.com/74803670/177051678-607fe38e-59b2-4d31-ac91-5f5c04559780.png)
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| CONTROL | PROPERTY | VALUE |
+| ----------- | ----------- | ----------- |
+| place 7 command buttons | Title |
+|  | Text |
 ```
 Option Explicit
 Dim operand As Double, operand2 As Double
