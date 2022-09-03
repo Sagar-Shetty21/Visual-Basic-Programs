@@ -4,51 +4,6 @@
 ### **1. Write a VB program to design a simple calculator to perform addition,subtraction,multiplication and division(Use functions for the calculations).**
 ![Screenshot (2)](https://user-images.githubusercontent.com/74803670/177051678-607fe38e-59b2-4d31-ac91-5f5c04559780.png)
 
-<table>
-<tr>
-<th>Command Buttons</th>
-<th>Label</th>
-<th>Command Button(as control array)</th>
-</tr>
-
-<td>
-
-| PROPERTY   |    VALUE   |
-|---------------|:------------:|
-|Name    |cmddot|
-|Caption | .    |
-|Name    |cmdclear|
-|Caption | C    |
-|Name    |cmdequal|
-|Caption | =    |
-|Name    |cmdplus|
-|Caption | +    |
-|Name    |cmdcminus|
-|Caption | -    |
-|Name    |cmdinto|
-|Caption | *    |
-|Name    |cmddiv|
-|Caption | /    |
-
-</td>
-<td>
-
-| PROPERTY   |    VALUE   |
-|-----|:---------------:|
-|Name    |display|
-|Border Style | fixed    |
-
-</td>
-<td>
-
-| PROPERTY   |    VALUE   |
-|-----|:---------------:|
-|Name    |Digit (0) to (9)|
-
-</td>
-</tr>
-</table>
-
 ```
 Option Explicit
 Dim operand As Double, operand2 As Double
@@ -135,6 +90,9 @@ Private Function divi(ByVal operand1 As Double, ByVal operand2 As Double) As Dou
 End Function
 ```
 ---
+
+
+
 ---
 ### **2. Design a User Interface (UI) to accept the student details such as name,department and total marks.Validate the input data and calculate the percentage nd division**
 ![Screenshot (3)](https://user-images.githubusercontent.com/74803670/177051946-ba4cd5a8-d301-4364-9abb-d421b691e55d.png)
