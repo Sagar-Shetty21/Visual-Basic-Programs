@@ -149,7 +149,7 @@ End Sub
 
 ### **Child Forms**
 
-** Form 1 **
+**Form 1**
 ![frm 1](https://user-images.githubusercontent.com/74803670/188280436-4d67552c-d5f4-4b44-b65d-816c689277bf.png)
 ```
 Private Sub cmdsave_Click()
@@ -174,7 +174,7 @@ Private Sub cmdexit_Click()
 End Sub
 ```
 
-** Form 2 **
+**Form 2**
 ![frm 2](https://user-images.githubusercontent.com/74803670/188280461-27afa78f-1012-433b-9688-b34371bd38a3.png)
 ```
 Private Sub cmdopen_Click()
@@ -198,7 +198,7 @@ Private Sub cmdexit_Click()
 End Sub
 ```
 
-** Form 3 **
+**Form 3**
 ![frm 3](https://user-images.githubusercontent.com/74803670/188280471-2a6e1376-a902-4646-b386-82188c0746a6.png)
 ```
 Private Sub cmdexit_Click()
