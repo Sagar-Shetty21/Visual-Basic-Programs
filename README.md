@@ -1,7 +1,7 @@
 # Visual-Basic-Programs
 
 
-### **1. Write a VB program to design a simple calculator to perform addition,subtraction,multiplication and division(Use functions for the calculations).**
+## **1. Write a VB program to design a simple calculator to perform addition,subtraction,multiplication and division(Use functions for the calculations).**
 ![Screenshot (2)](https://user-images.githubusercontent.com/74803670/177051678-607fe38e-59b2-4d31-ac91-5f5c04559780.png)
 
 ```
@@ -94,13 +94,122 @@ End Function
 
 
 ---
-### **2. Design a VB application which has MDI and child forms. Create a menu having the items such as File(New,Open),Format(Font,Regular,Bold,Italic) and Exit in the MDI form. Also create a textbox and use a Common Dialog Box for changing the font, forecolor and back color of the text box.**
-![Screenshot (3)](https://user-images.githubusercontent.com/74803670/177051946-ba4cd5a8-d301-4364-9abb-d421b691e55d.png)
-```
+## **2. Design a VB application which has MDI and child forms. Create a menu having the items such as File(New,Open),Format(Font,Regular,Bold,Italic) and Exit in the MDI form. Also create a textbox and use a Common Dialog Box for changing the font, forecolor and back color of the text box.**
+
+### **MDI Form**
+![Screenshot (23)](https://user-images.githubusercontent.com/74803670/188280025-7b164703-7a54-414d-ab31-39615045cdd2.png)
+![Screenshot (24)](https://user-images.githubusercontent.com/74803670/188280062-9be6bfc3-a29f-488b-bfda-7b7c1b937485.png)
 
 ```
+Private Sub mnunew_Click()
+    frmch1.Show
+End Sub
+
+Private Sub mnuopen_Click()
+    frmch2.Show
+End Sub
+
+Private Sub mnuformat_Click()
+    frmch3.Show
+End Sub
+
+Private Sub mnuarial_Click()
+    frmch3.txtdemo.FontName = "Arial"
+End Sub
+
+Private Sub mnugaramond_Click()
+    frmch3.txtdemo.FontName = "garamond"
+End Sub
+
+Private Sub mnuimpact_Click()
+    frmch3.txtdemo.FontName = "impact"
+End Sub
+
+Private Sub mnulucida_Click()
+    frmch3.txtdemo.FontName = "lucida sans"
+End Sub
+
+Private Sub mnubold_Click()
+    frmch3.txtdemo.FontBold = True
+End Sub
+
+Private Sub mnuitalic_Click()
+    frmch3.txtdemo.FontItalic = True
+End Sub
+
+Private Sub mnuregular_Click()
+    frmch3.txtdemo.FontBold = False
+    frmch3.txtdemo.FontItalic = False
+End Sub
+
+Private Sub mnuexit_Click()
+    Unload Me
+End Sub
+```
+
+### **Child Forms**
+
+**Form 1**
+![frm 1](https://user-images.githubusercontent.com/74803670/188280436-4d67552c-d5f4-4b44-b65d-816c689277bf.png)
+```
+Private Sub cmdsave_Click()
+    Dim filelocation As String
+    If Text1.Text <> "" Then
+        CommonDialog1.ShowSave
+        filelocation = CommonDialog1.FileName
+        If filelocation <> "" Then
+            Open filelocation For Append As #1
+            Print #1, Text1.Text
+            Close #1
+        Else
+            MsgBox "File name not specified. File cannot be saved"
+        End If
+    Else
+        MsgBox "Text box is empty"
+    End If
+End Sub
+
+Private Sub cmdexit_Click()
+    Unload Me
+End Sub
+```
+
+**Form 2**
+![frm 2](https://user-images.githubusercontent.com/74803670/188280461-27afa78f-1012-433b-9688-b34371bd38a3.png)
+```
+Private Sub cmdopen_Click()
+    Dim filelocation As String
+    CommonDialog1.ShowOpen
+    filelocation = CommonDialog1.FileName
+    If filelocation <> "" Then
+        Open filelocation For Input As #1
+        Do Until EOF(1)
+            Input #1, Data
+            Text1.Text = Text1.Text + Data + vbNewLine
+        Loop
+        Close #1
+    Else
+        MsgBox "No FileName selected ->->"
+    End If
+End Sub
+
+Private Sub cmdexit_Click()
+    Unload Me
+End Sub
+```
+
+**Form 3**
+![frm 3](https://user-images.githubusercontent.com/74803670/188280471-2a6e1376-a902-4646-b386-82188c0746a6.png)
+```
+Private Sub cmdexit_Click()
+    Unload Me
+End Sub
+```
+
 ---
 ---
+
+## **3. Design a amall Alarm Clock Application.**
 
 
 
